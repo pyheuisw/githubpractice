@@ -41,6 +41,6 @@ driver.find_element(By.XPATH, '//*[@id="dologin"]').click()
 
 
 
-time.sleep(3)
+time.sleep(10)
 driver.close()
 
