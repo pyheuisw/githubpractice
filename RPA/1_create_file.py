@@ -9,6 +9,6 @@ ws.title = "test"
 ws2 = wb.create_sheet("test2", 2)
 
 # Sheet 복수
-new_ws["A1"] = "test"
+# new_ws["A1"] = "test"
 wb.save("test.xlsx")
 wb.close()
