@@ -12,6 +12,7 @@ def makeorder():
     driver = webdriver.Chrome()
     wait = WebDriverWait(driver, 10)
     
+    
     #### 상품상세 ####
 
 
