@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Windows 실행 확인') {
+            steps {
+                echo 'Jenkinsfile loaded from GitHub'
+                bat 'whoami'
+            }
+        }
+    }
+}
