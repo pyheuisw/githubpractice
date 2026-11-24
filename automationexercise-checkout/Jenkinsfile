@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Jenkinsfile loaded from GitHub'
                 bat 'whoami'
+                bat 'python --version'
             }
         }
     }
