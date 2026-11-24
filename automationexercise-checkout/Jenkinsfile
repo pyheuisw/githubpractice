@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Jenkinsfile loaded from GitHub'
                 bat 'whoami'
-                bat 'python --version'
+                bat '"C:\\Users\\comes\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" --version'
             }
         }
     }
