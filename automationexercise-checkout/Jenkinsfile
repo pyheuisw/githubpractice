@@ -3,6 +3,7 @@ pipeline {
 
     triggers {
         pollSCM('H/5 * * * *')
+        cron('TZ=Asia/Seoul\n0 15 * * 1-5')
     }
     
     stages {
