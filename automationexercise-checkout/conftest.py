@@ -8,7 +8,7 @@ from selenium.webdriver.chrome.options import Options  # 크롬 실행 옵션 �
 @pytest.fixture                   # 아래 함수를 pytest의 '공용 준비물(fixture)'로 등록
 def driver(request):              # 테스트 함수가 driver를 인자로 받으면 이 함수가 먼저 실행됨; request는 현재 테스트 정보 객체
     options = Options()           # 빈 크롬 설정 객체 생성
-    # options.add_argument("--headless=new")  # 창을 띄우지 않고 백그라운드에서 실행할 때 쓰는 옵션(현재는 주석 처리)
+    options.add_argument("--headless=new")  # 창을 띄우지 않고 백그라운드에서 실행할 때 쓰는 옵션(현재는 주석 처리)
     options.add_argument("--window-size=1440,900")  # 화면 크기를 고정해 버튼이 가려지거나 레이아웃이 깨지는 변수 방지
     options.add_argument("--disable-gpu")     # 그래픽 가속 비활성화(가상환경/CI 안정성 목적)
     options.add_argument("--no-sandbox")      # 리눅스 컨테이너 환경에서 크롬 실행 권한 오류 방지
