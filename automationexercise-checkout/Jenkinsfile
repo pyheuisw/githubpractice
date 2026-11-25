@@ -5,7 +5,7 @@ pipeline {
         pollSCM('H/5 * * * *')
         cron('TZ=Asia/Seoul\n0 15 * * 1-5')
     }
-    
+
     stages {
         stage('Windows 실행 확인') {
             steps {
@@ -25,7 +25,6 @@ pipeline {
             }
         }
 
-                stage('결제 테스트 실행') {
         stage('결제 테스트 실행') {
             steps {
                 dir('automationexercise-checkout') {
@@ -37,7 +36,6 @@ pipeline {
                     junit testResults: 'automationexercise-checkout/reports/junit.xml'
                 }
             }
-        }
         }
     }
 }
