@@ -34,6 +34,7 @@ pipeline {
             post {
                 always {
                     junit testResults: 'automationexercise-checkout/reports/junit.xml'
+                    allure commandline: 'allure-3', results: [[path: 'automationexercise-checkout/reports/allure-results']]
                 }
             }
         }
