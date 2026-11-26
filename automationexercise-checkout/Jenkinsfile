@@ -28,7 +28,7 @@ pipeline {
         stage('결제 테스트 실행') {
             steps {
                 dir('automationexercise-checkout') {
-                    bat '.venv\\Scripts\\python.exe -m pytest -v tests/test_first_product_checkout.py --junitxml=reports/junit.xml'
+                    bat '.venv\\Scripts\\python.exe -m pytest -v tests/test_first_product_checkout.py --junitxml=reports/junit.xml --alluredir=reports/allure-results --clean-alluredir'
                 }
             }
             post {
