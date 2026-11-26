@@ -41,3 +41,13 @@ def driver(request):              # 테스트 함수가 driver를 인자로 받�
         )
 
     drv.quit()                    # 테스트 성공/실패와 무관하게 마지막에 브라우저 창과 드라이버 프로세스 종료
+
+
+@pytest.hookimpl(wrapper=True, tryfirst=True)
+def pytest_runtest_makereport(item, call):
+    report = yield
+
+    if report.when == "call":
+        item.rep_call = report
+
+    return report
